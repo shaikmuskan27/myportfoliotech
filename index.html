@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaik Muskan | Zero Trust Security & Distributed Systems Engineer</title>
+    <meta name="description" content="Portfolio of Shaik Muskan, Software Engineer specializing in Zero Trust Security, Network Security, and Distributed Systems. B.Tech in CSE (IoT), Cisco Certified.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cyber-theme">
+    <!-- Background Canvas for Network Particles -->
+    <canvas id="network-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="glass-header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>SM<span class="logo-accent">.log /&gt;</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link active"><span class="nav-num">01.</span> // terminal</a>
+                <a href="#skills" class="nav-link"><span class="nav-num">02.</span> // capabilities</a>
+                <a href="#projects" class="nav-link"><span class="nav-num">03.</span> // deployments</a>
+                <a href="#experience" class="nav-link"><span class="nav-num">04.</span> // log_history</a>
+                <a href="#contact" class="btn-primary secure-link"><i class="fa-solid fa-key"></i> Establish Uplink</a>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Section 1: Hero & Terminal -->
+        <section id="about" class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-info">
+                    <div class="badge"><span class="pulse-dot"></span> SECURITY STATUS: SECURE (mTLS ON)</div>
+                    <h1 class="hero-title">
+                        Shaik Muskan
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Software Engineer <span class="text-highlight">// Zero Trust & Systems</span>
+                    </h2>
+                    <p class="hero-description">
+                        Specializing in Zero Trust Architecture, network security protocol design, and high-performance container isolation systems. Engineered to protect distributed systems from runtime to transit.
+                    </p>
+                    <div class="metrics-strip">
+                        <div class="metric-item">
+                            <span class="metric-val">99%ile</span>
+                            <span class="metric-label">National CoCubes</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-val">CISCO</span>
+                            <span class="metric-label">Security Certified</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-val">8.49</span>
+                            <span class="metric-label">CGPA B.Tech CSE</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-primary"><i class="fa-solid fa-network-wired"></i> View Deployments</a>
+                        <a href="mailto:shaikmuskan2712@gmail.com" class="btn-secondary"><i class="fa-solid fa-envelope"></i> Contact Operator</a>
+                    </div>
+                </div>
+
+                <!-- Interactive Terminal Container -->
+                <div class="terminal-container">
+                    <div class="terminal-bar">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <div class="terminal-title">operator@shaik-muskan: ~</div>
+                        <div class="terminal-status"><i class="fa-solid fa-lock"></i> SSH SECURE</div>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-line"><span class="term-prompt">guest@sm-os:~$</span> cat about_me.json</div>
+                        <div class="terminal-output">
+{
+  <span class="json-key">"name"</span>: <span class="json-val">"Shaik Muskan"</span>,
+  <span class="json-key">"focus"</span>: <span class="json-val">"Zero Trust Architecture & Network Isolation"</span>,
+  <span class="json-key">"location"</span>: <span class="json-val">"India"</span>,
+  <span class="json-key">"academic"</span>: <span class="json-val">"B.Tech CSE (IoT) - RVR & JC"</span>,
+  <span class="json-key">"interests"</span>: [<span class="json-val">"Linux Runtimes"</span>, <span class="json-val">"mTLS"</span>, <span class="json-val">"Cryptography"</span>]
+}</div>
+                        <div class="terminal-line"><span class="term-prompt">guest@sm-os:~$</span> ./check_security_status.sh</div>
+                        <div class="terminal-output status-checking">
+[<span class="status-ok"> OK </span>] Namespaces isolated via Linux clone()<br>
+[<span class="status-ok"> OK </span>] Cgroups memory limits enforced: 512MB limit<br>
+[<span class="status-ok"> OK </span>] mTLS validation: Handshake completed successfully<br>
+[<span class="status-warning"> WARN </span>] Zero Trust Policy: Encrypting all egress channels...</div>
+                        <div class="terminal-line dynamic-prompt"><span class="term-prompt">guest@sm-os:~$</span> <span id="typed-cursor" class="typing"></span><span class="cursor-blink">|</span></div>
+                    </div>
+                    <div class="terminal-input-row">
+                        <span class="term-prompt-static">&gt;</span>
+                        <input type="text" id="terminal-user-input" placeholder="Type 'help' or 'list' for security terminal diagnostics..." autofocus>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Technical Capabilities -->
+        <section id="skills" class="skills-section">
+            <div class="section-header">
+                <span class="sec-num">02.</span>
+                <h3 class="sec-title">Capabilities Matrix</h3>
+                <div class="sec-divider"></div>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill Category: Core Languages -->
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                    <h4>Systems Languages</h4>
+                    <div class="skill-badge-container">
+                        <span class="skill-badge"><i class="fa-brands fa-golang"></i> Go (Golang)</span>
+                        <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="skill-badge">C / C++</span>
+                        <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
+                    </div>
+                    <div class="skill-footer-log">
+                        <span class="log-label">COMPILERS:</span> <span class="log-value">GCC/Clang, Go 1.22</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category: Networking & Zero Trust -->
+                <div class="skill-card featured-skill">
+                    <div class="skill-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4>Network Security & Zero Trust</h4>
+                    <div class="skill-badge-container">
+                        <span class="skill-badge">TCP/IP Protocols</span>
+                        <span class="skill-badge">HTTP / HTTPS / DNS</span>
+                        <span class="skill-badge">SSL / TLS 1.3</span>
+                        <span class="skill-badge">Zero Trust Architecture</span>
+                        <span class="skill-badge">Network Segmentation</span>
+                        <span class="skill-badge">mTLS (Mutual TLS)</span>
+                    </div>
+                    <div class="skill-footer-log">
+                        <span class="log-label">POLICY:</span> <span class="log-value">Default-Deny Access Controls</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category: Systems & Infrastructure -->
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+                    <h4>Systems & Sandbox Infra</h4>
+                    <div class="skill-badge-container">
+                        <span class="skill-badge"><i class="fa-brands fa-linux"></i> Linux/Unix Core</span>
+                        <span class="skill-badge"><i class="fa-brands fa-docker"></i> Docker Engine</span>
+                        <span class="skill-badge">Namespace Isolation</span>
+                        <span class="skill-badge">Cgroups Hardening</span>
+                        <span class="skill-badge">Chroot Sandboxing</span>
+                        <span class="skill-badge"><i class="fa-brands fa-aws"></i> AWS (EC2, S3)</span>
+                        <span class="skill-badge">Terraform</span>
+                        <span class="skill-badge">Kafka Pipelines</span>
+                    </div>
+                    <div class="skill-footer-log">
+                        <span class="log-label">ISOLATION:</span> <span class="log-value">Kernel Namespaces</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Core Deployments (Projects) -->
+        <section id="projects" class="projects-section">
+            <div class="section-header">
+                <span class="sec-num">03.</span>
+                <h3 class="sec-title">Core Deployments</h3>
+                <div class="sec-divider"></div>
+            </div>
+
+            <div class="projects-list">
+                <!-- Project 1: Gocker -->
+                <div class="project-container">
+                    <div class="project-info">
+                        <div class="project-tag">CONTAINER RUNTIME</div>
+                        <h4 class="project-title">Gocker — Custom Linux Container Runtime</h4>
+                        <p class="project-description">
+                            Engineered an isolated container engine from the ground up in Go, mimicking core Docker-like virtualization mechanics to control processes at the Linux kernel level. Implements isolation, resources limits, and isolated environments to ensure absolute systems integrity.
+                        </p>
+                        <ul class="project-bullet-list">
+                            <li>Used <strong>Linux Namespaces</strong> (PID, Mount, Net, UTS) via direct system calls to achieve complete process tree and mount point virtualization.</li>
+                            <li>Integrated <strong>Cgroups v2 resource-control</strong> layers, building a programmatic interface to limit CPU percentages and impose memory quotas (e.g. OOM killer thresholding).</li>
+                            <li>Hardened execution environments using a locked-down <strong>Chroot jail</strong> mapped to isolated private mount paths to restrict access to host system directories.</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>Go (Golang)</span>
+                            <span>Linux Kernel APIs</span>
+                            <span>Cgroups</span>
+                            <span>Namespaces</span>
+                            <span>Chroot</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shaikmuskan" target="_blank" class="project-link-btn"><i class="fa-brands fa-github"></i> Repository</a>
+                            <a href="#projects" class="project-link-btn disabled-link"><i class="fa-solid fa-network-wired"></i> Architecture Verified</a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="visual-header">
+                            <i class="fa-solid fa-cube"></i> ARCHITECTURE DIAGRAM: GOCKER SANDBOX
+                        </div>
+                        <div class="architecture-box">
+                            <div class="arch-layer host-kernel">
+                                <span>Host Kernel (Namespaces / Cgroups)</span>
+                            </div>
+                            <div class="arch-connector"></div>
+                            <div class="arch-layer sandbox-jail">
+                                <span class="sandbox-title"><i class="fa-solid fa-shield-halved"></i> Chroot Jail Boundary</span>
+                                <div class="sandbox-elements">
+                                    <div class="element-box">PID Isolated</div>
+                                    <div class="element-box">NET Isolated</div>
+                                    <div class="element-box">Cgroup Enforced</div>
+                                </div>
+                            </div>
+                            <div class="arch-status">
+                                <span class="glow-indicator online"></span> RUNTIME: RUNNING
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: AI-Driven Network Security Engine -->
+                <div class="project-container reverse-flex">
+                    <div class="project-info">
+                        <div class="project-tag">AI & NETWORK PROTOCOLS</div>
+                        <h4 class="project-title">AI-Driven Network Security & Diagnostics Engine</h4>
+                        <p class="project-description">
+                            Developed a hybrid system combining artificial intelligence with low-level network audits to scan, diagnose, and automatically debug live infrastructures while managing security risk vectors.
+                        </p>
+                        <ul class="project-bullet-list">
+                            <li>Implemented <strong>Layer 7 protocol validation</strong> including automated DNS query records validation, SSL/TLS handshake validity analysis, and HTTP raw header security scanning.</li>
+                            <li>Engineered an optimization middleware in <strong>Go and Python</strong> to serialize high-bandwidth raw diagnostic outputs into compact JSON payloads, reducing LLM token overhead by 35%.</li>
+                            <li>Built an asynchronous diagnostic execution pipeline capable of auditing multiple network points concurrently with minimal operational latency.</li>
+                        </ul>
+                        <div class="project-tech-stack">
+                            <span>Python</span>
+                            <span>Go</span>
+                            <span>Node.js</span>
+                            <span>TCP/IP Protocols</span>
+                            <span>SSL/TLS</span>
+                            <span>DNS Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shaikmuskan" target="_blank" class="project-link-btn"><i class="fa-brands fa-github"></i> Source</a>
+                            <a href="#projects" class="project-link-btn disabled-link"><i class="fa-solid fa-robot"></i> LLM-Validated</a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="visual-header">
+                            <i class="fa-solid fa-shield-virus"></i> DIAGNOSTIC DIAGRAM
+                        </div>
+                        <div class="network-engine-terminal">
+                            <div class="terminal-logs">
+                                <div class="log-entry"><span class="log-time">[10:04:51]</span> <span class="log-info">[INFO]</span> Initializing Diagnostic Core...</div>
+                                <div class="log-entry"><span class="log-time">[10:04:52]</span> <span class="log-info">[INFO]</span> Validating DNS Security Headers...</div>
+                                <div class="log-entry"><span class="log-time">[10:04:52]</span> <span class="log-pass">[PASS]</span> CAA Record verified. DNSSEC active.</div>
+                                <div class="log-entry"><span class="log-time">[10:04:53]</span> <span class="log-info">[INFO]</span> Analyzing SSL/TLS parameters...</div>
+                                <div class="log-entry"><span class="log-time">[10:04:53]</span> <span class="log-warn">[WARN]</span> TLS 1.0/1.1 disabled. Only TLS 1.2+ accepted.</div>
+                                <div class="log-entry"><span class="log-time">[10:04:54]</span> <span class="log-pass">[PASS]</span> Raw metrics serialized. Sending payload...</div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Operational Log History (Experience) -->
+        <section id="experience" class="experience-section">
+            <div class="section-header">
+                <span class="sec-num">04.</span>
+                <h3 class="sec-title">Operational History</h3>
+                <div class="sec-divider"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-date">DEC 2025 - APR 2026</div>
+                        <h4 class="timeline-role">Data Analytics Intern</h4>
+                        <h5 class="timeline-company"><i class="fa-solid fa-building"></i> Slash Mark IT Solutions</h5>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Architected and integrated fault-tolerant data pipeline solutions on enterprise Linux distributions to process large-scale telemetry data feeds.</p>
+                        <ul>
+                            <li>Engineered custom automation tasks using bash and Python script utilities to eliminate file transfer bottlenecks.</li>
+                            <li><strong>Reduced operational overhead by 40%</strong> through automated log auditing and environment configurations.</li>
+                            <li>Optimized SQL indexes and memory parameters, <strong>cutting pipeline processing latency by 25%</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-date">MAY 2025 - JUL 2025</div>
+                        <h4 class="timeline-role">Android Developer Intern</h4>
+                        <h5 class="timeline-company"><i class="fa-solid fa-building"></i> Blackbuck Engineers</h5>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Refactored legacy application features utilizing design frameworks to optimize memory distribution and maintain modular codebases.</p>
+                        <ul>
+                            <li>Migrated application layers using <strong>Clean Architecture principles</strong> in Flutter to achieve complete separation of business and visual presentation layers.</li>
+                            <li>Built state handlers to limit UI rebuilds and improve local database access cache lookups.</li>
+                            <li>Coordinated with visual designers to review interface assets and dynamic animation layouts.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Block -->
+            <div class="education-block-wrapper">
+                <div class="section-header sub-header">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3 class="sec-title">Academic Record</h3>
+                </div>
+                <div class="education-card">
+                    <div class="edu-header">
+                        <div>
+                            <h4>B.Tech in Computer Science & Engineering (Internet of Things)</h4>
+                            <h5>RVR & JC College of Engineering (Graduating May 2026)</h5>
+                        </div>
+                        <div class="edu-gpa">CGPA: 8.49/10</div>
+                    </div>
+                    <p class="edu-details">
+                        Specialized coursework covering Network Technologies, Embedded Systems, IoT Architectures, Cyber Security Protocols, and Distributed Architecture Design.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Establish Uplink (Contact) -->
+        <section id="contact" class="contact-section">
+            <div class="section-header">
+                <span class="sec-num">05.</span>
+                <h3 class="sec-title">Secure Terminal Uplink</h3>
+                <div class="sec-divider"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-terminal">
+                    <div class="terminal-bar bg-accent">
+                        <div class="terminal-title"><i class="fa-solid fa-network-wired"></i> UPLINK_HANDSHAKE.LOG</div>
+                        <div class="terminal-status"><span class="glow-indicator online"></span> LISTENING</div>
+                    </div>
+                    <div class="terminal-body" id="contact-log-body">
+                        <div class="log-entry"><span class="log-time">[SYS]</span> Listening on port 443...</div>
+                        <div class="log-entry"><span class="log-time">[SYS]</span> Secure mTLS configuration loaded.</div>
+                        <div class="log-entry"><span class="log-time">[SYS]</span> Ready for secure client messages.</div>
+                        <div class="log-entry placeholder-entry"><span class="log-time">[SYS]</span> Waiting for operator uplink parameters...</div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="secure-contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name-input">// CLIENT NAME</label>
+                            <input type="text" id="name-input" required placeholder="Alice / Acme Corp">
+                        </div>
+                        <div class="form-group">
+                            <label for="email-input">// RECOVERY MAIL</label>
+                            <input type="email" id="email-input" required placeholder="client@domain.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-input">// ENCRYPTED PAYLOAD</label>
+                            <textarea id="message-input" rows="5" required placeholder="Type your secure transmission details..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary form-submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Transmit Packet
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-container">
+            <div class="footer-meta">
+                <p>&copy; 2026 Shaik Muskan. All rights reserved.</p>
+                <p class="footer-sec-stamp">SHA-256 INTEGRITY VALIDATED | ZERO TRUST COMPLIANT</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/shaikmuskan" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/shaikmuskan" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:shaikmuskan2712@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="tel:+918919385119" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
